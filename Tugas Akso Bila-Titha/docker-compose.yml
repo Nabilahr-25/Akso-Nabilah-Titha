@@ -1,0 +1,41 @@
+name: Http_and_Web_Akso
+
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx_server
+    ports:
+      - "8082:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf # File konfigurasi NGINX
+      - ./nginx/html:/usr/share/nginx/html                 # Direktori untuk file HTML statis
+    networks:
+      - app_network
+
+  mysql:
+    image: mysql:latest
+    container_name: mysql_server
+    environment:
+      MYSQL_ROOT_PASSWORD: composepassword    # Password untuk root user MySQL
+      MYSQL_DATABASE: composedb              # Nama database yang akan dibuat
+      MYSQL_USER: composeuser                # User custom untuk MySQL
+      MYSQL_PASSWORD: composepass            # Password untuk user custom
+    ports:
+      - "3306:3306"
+    volumes:
+      - data./sql:/docker-entrypoint-initdb.d/   # Direktori untuk skrip inisialisasi MySQL
+    networks:
+      - app_network
+
+  redis:
+    image: redis:latest
+    
+
+networks:
+  app_network:
+    driver: bridge
+
+
+
+
+
