@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tugas Docker Compose</title>
+    <style>
+        /* Global Styles */
+        body {
+            background-color: rgb(240, 248, 255);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container Styles */
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+        }
+
+        /* Header Styles */
+        .highlight {
+            color: rgb(21, 3, 54);
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .sub-header {
+            text-align: center;
+            color: gray;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Paragraph Styles */
+        .justify-text {
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Button Styles */
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: rgb(21, 3, 54);
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: rgb(30, 10, 70);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="highlight">Tugas Docker Compose</h1>
+        <h4 class="sub-header">By : Nabila (053) & Atitha (039)</h4>
+
+        <p class="justify-text">
+            Docker adalah platform perangkat lunak yang memungkinkan Anda untuk membangun, menguji, dan melakukan deployment aplikasi dengan cepat. Docker adalah teknologi berbasis open-source yang memungkinkan pengembang untuk membuat, mengemas, dan menjalankan aplikasi dalam container. Container ini seperti "kotak" yang berisi semua yang dibutuhkan aplikasi agar bisa berjalan, termasuk kode sumber, pustaka, dependensi, dan pengaturan sistem.
+        </p>
+
+        <button class="button" onclick="showMessage()">Pelajari Lebih Lanjut</button>
+        <button class="button" onclick="alert('Terima Kasih!')">Klik untuk Mengirim</button>
+        <p id="message" style="margin-top: 20px; color: green; text-align: center;"></p>
+    </div>
+
+    <script>
+        function showMessage() {
+            const message = document.getElementById("message");
+            message.textContent = "Docker mempermudah proses pengembangan dan deployment aplikasi.";
+        }
+    </script>
+</body>
+
+</html>
