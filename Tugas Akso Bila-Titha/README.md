@@ -3,7 +3,6 @@ Projek UAS ARSITEKTUR KOMPUTER DAN SISTEM OPERASI Semester 1 dengan dosen pengam
 
 ## Getting Started
 Pada project kali ini kami menggunakan NGINX, MY SQL dan Redis
-
 Simply, run the following command:
 ```
 docker-compose up -d 
