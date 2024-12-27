@@ -1,6 +1,7 @@
 name: Http_and_Web_Akso
 
 services:
+#aplikasi wajib web server
   nginx:
     image: nginx:latest
     container_name: nginx_server
@@ -20,6 +21,7 @@ services:
       timeout: 10s
       retries: 3
 
+#aplikasi database pertama
   mysql:
     image: mysql:latest
     container_name: mysql_server
@@ -35,7 +37,7 @@ services:
     networks:
       - app_network
     restart: always
-
+#webserver
   redis:
     image: redis:latest
     container_name: redis_server
@@ -45,6 +47,7 @@ services:
       - app_network
     restart: always
 
+#aplikasi database ke 2
   mariadb_server:
     image: mariadb:latest
     container_name: mariadb_server
@@ -60,7 +63,7 @@ services:
     networks:
       - app_network
     restart: always
-
+#webserver
   phpmyadmin:
     image: phpmyadmin:latest
     container_name: phpmyadmin_server
